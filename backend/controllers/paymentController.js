@@ -1,14 +1,12 @@
-const catchAsyncErrors = require('../middlewares/catchAsyncErrors');
-const ErrorHandler = require('../utils/ErrorHandler');
+const catchAsyncErrors = require("../middlewares/catchAsyncErrors");
+const ErrorHandler = require("../utils/ErrorHandler");
 
-const stripe = require('stripe')(
-  'sk_test_51LlZlKSBs81qlxwMaYtypjKefQHp43lOPmBMkP2J0mPIKQMoBpexkBKtT2asxeuHS76TaMt74tRkKzS72SeDLJgd00edfxLKRw'
-);
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 exports.processPayment = catchAsyncErrors(async (req, res, next) => {
   const paymentIntent = await stripe.paymentIntents.create({
     amount: req.body.amount,
-    currency: 'INR',
+    currency: "INR",
   });
 
   res.status(201).json({

@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter';
+}
+
+body {
+  background-color: #f6f9fc;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#__react-alert__ div div div {
+  width: auto !important;
+}
+
+.inputEl {
+  border: 2px solid #dcdcdc;
+  padding: 8px;
+  border-radius: 3px;
+}
+
+.green {
+  color: green;
+  font-weight: 500;
+}
+.yellow {
+  color: goldenrod;
+  font-weight: 500;
+}
+.blue {
+  color: #1565c0;
+  font-weight: 500;
+}
+.red {
+  color: red;
+  font-weight: 500;;
+}
